@@ -1,4 +1,3 @@
-// Función para cargar los años únicos desde el archivo CSV
 async function cargarAnios() {
     try {
         const response = await fetch('Datos/Pruebas.csv');
@@ -13,8 +12,10 @@ async function cargarAnios() {
         rows.forEach(row => {
             const columns = row.split(',');
             if (columns.length) {
-                const [ANIO] = columns.map(col => col.trim()); // Extraer el valor de ANIO
-                anios.add(ANIO);
+                const ANIO = columns[0].trim(); // Extraer y limpiar el valor de ANIO
+                if (ANIO) { // Asegurarse de que ANIO no esté vacío
+                    anios.add(ANIO);
+                }
             }
         });
 
