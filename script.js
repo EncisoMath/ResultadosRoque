@@ -344,6 +344,15 @@ if (imgExamens.length > 0) {
                         </div>
                         <hr>
                         ${tablaNotas}
+
+                        // Verificar si hay al menos una imagen
+if (imgExamens.length > 0) {
+    // Mensaje que se mostrará si hay imágenes
+    document.getElementById('resultado').innerHTML += "<h3>Aquí está tu examen:</h3>"; // Agrega el mensaje al contenedor 'resultado'
+
+}
+
+
                             <!-- Descripción de colores -->
                             <div style="text-align: center; width: 100%; max-width: 1000px;">
                                 <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
