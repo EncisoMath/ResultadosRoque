@@ -289,15 +289,19 @@ for (let i = 1; i <= 4; i++) {
 if (imgExamens.length > 0) {
     const container = document.getElementById('imagenes-container'); // Asegúrate de tener un contenedor con este ID en tu HTML
 
-    imgExamens.forEach(imgSrc => {
-        const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
-        imgElement.src = imgSrc; // Asigna la fuente de la imagen
-        imgElement.alt = 'Imagen del examen'; // Texto alternativo
-        imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
-        imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
+    if (container) { // Verifica que el contenedor exista
+        imgExamens.forEach(imgSrc => {
+            const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
+            imgElement.src = imgSrc; // Asigna la fuente de la imagen
+            imgElement.alt = 'Imagen del examen'; // Texto alternativo
+            imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
+            imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
 
-        container.appendChild(imgElement); // Agrega la imagen al contenedor
-    });
+            container.appendChild(imgElement); // Agrega la imagen al contenedor
+        });
+    } else {
+        console.error('El contenedor para las imágenes no se encontró en el HTML.');
+    }
 } else {
     console.log('No se encontraron imágenes.');
 }
