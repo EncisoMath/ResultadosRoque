@@ -291,91 +291,63 @@ if (imgExamens.length > 0) {
 }
 
 
-                    // Añadir el mensaje y la imagen al HTML
-                    resultado.innerHTML = `
-                        <h1>Resultados</h1>
+// Añadir el mensaje y la imagen al HTML
+resultado.innerHTML = `
+    <h1>Resultados</h1>
 
-                        
-<!-- Contenedor principal -->
-<div class="resultados-container" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+    <!-- Contenedor principal -->
+    <div class="resultados-container" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
 
-    <!-- Bloque superior (Información del alumno) -->
-    <div class="resultado-left" style="width: 100%; text-align: center; margin-bottom: 20px;">
-        <div class="resultado-item" style="margin-bottom: 10px;">
-            <span class="bold-font" style="color: orange; font-size: 22px;">Alumno: </span>
-            <span>${NOMBRE}</span>
+        <!-- Bloque superior (Información del alumno) -->
+        <div class="resultado-left" style="width: 100%; text-align: center; margin-bottom: 20px;">
+            <div class="resultado-item" style="margin-bottom: 10px;">
+                <span class="bold-font" style="color: orange; font-size: 22px;">Alumno: </span>
+                <span>${NOMBRE}</span>
+            </div>
+            <div class="resultado-item">
+                <span class="bold-font" style="color: orange; font-size: 22px;">Grado y Sede: </span>
+                <span>${GRADO} ${SEDE}</span>
+            </div>
         </div>
-        <div class="resultado-item">
-            <span class="bold-font" style="color: orange; font-size: 22px;">Grado y Sede: </span>
-            <span>${GRADO} ${SEDE}</span>
+
+        <!-- Bloque inferior (Ranking) -->
+        <div class="resultado-right" style="width: 100%; text-align: center;">
+            <!-- Título "Ranking" centrado -->
+            <div class="bold-font" style="color: orange; font-size: 35px; margin-top: 0;">Ranking</div>
+
+            <!-- División de dos columnas para RANKING_C y RANKING_G -->
+            <div class="bold-font" style="font-size: 32px; display: flex; justify-content: space-around; margin-top: 20px;">
+
+                <!-- Columna izquierda con RANKING_C -->
+                <div style="text-align: center;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <img src="Iconos/${RANKING_C >= 1 && RANKING_C <= 3 ? `${RANKING_C}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
+                        <span>${RANKING_C}</span>
+                    </div>
+                    <div style="font-size: 18px; margin-top: 10px;">Nivel Curso</div>
+                </div>
+
+                <!-- Columna derecha con RANKING_G -->
+                <div style="text-align: center;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <img src="Iconos/${RANKING_G >= 1 && RANKING_G <= 3 ? `${RANKING_G}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
+                        <span>${RANKING_G}</span>
+                    </div>
+                    <div style="font-size: 18px; margin-top: 10px;">Nivel Grado</div>
+                </div>
+            </div>
         </div>
     </div>
+    <hr>
+    ${tablaNotas}
 
-    <!-- Bloque inferior (Ranking) -->
-    <div class="resultado-right" style="width: 100%; text-align: center;">
-        <!-- Título "Ranking" centrado -->
-        <div class="bold-font" style="color: orange; font-size: 35px; margin-top: 0;">Ranking</div>
-
-        <!-- División de dos columnas para RANKING_C y RANKING_G -->
-        <div class="bold-font" style="font-size: 32px; display: flex; justify-content: space-around; margin-top: 20px;">
-
-            <!-- Columna izquierda con RANKING_C -->
-            <div style="text-align: center;">
-                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                    <img src="Iconos/${RANKING_C >= 1 && RANKING_C <= 3 ? `${RANKING_C}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
-                    <span>${RANKING_C}</span>
-                </div>
-                <div style="font-size: 18px; margin-top: 10px;">Nivel Curso</div>
-            </div>
-
-            <!-- Columna derecha con RANKING_G -->
-            <div style="text-align: center;">
-                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                    <img src="Iconos/${RANKING_G >= 1 && RANKING_G <= 3 ? `${RANKING_G}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
-                    <span>${RANKING_G}</span>
-                </div>
-                <div style="font-size: 18px; margin-top: 10px;">Nivel Grado</div>
-            </div>
-        </div>
+    <!-- Descripción de colores -->
+    <div style="text-align: center; width: 100%; max-width: 1000px;">
+        <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
     </div>
-
-</div>
-
-                        </div>
-                        <hr>
-                        ${tablaNotas}
-
-if (imgExamens.length > 0) {
-    // Mensaje que se mostrará si hay imágenes
-    document.getElementById('resultado').innerHTML += "<h3>Aquí está tu examen:</h3>"; // Agrega el mensaje al contenedor 'resultado'
-
-    // Crear el contenedor de las imágenes
-    let imagenesHTML = '<div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">';
-
-    // Iterar sobre imgExamens y agregar cada imagen
-    imgExamens.forEach(src => {
-        imagenesHTML += `
-            <div style="width: 100%; max-width: 500px; overflow: hidden;">
-                <img src="${src}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" 
-                     onerror="this.onerror=null; this.src='Iconos/NA.png';">
-            </div>
-        `;
-    });
-
-    imagenesHTML += '</div>'; // Cierra el contenedor de las imágenes
-
-    // Agregar las imágenes al contenedor 'resultado'
-    document.getElementById('resultado').innerHTML += imagenesHTML;
-}
+`;
 
 
-                            <!-- Descripción de colores -->
-                            <div style="text-align: center; width: 100%; max-width: 1000px;">
-                                <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
-                            </div>
-                        </div>
-
-                    `;
 
                     encontrado = true;
                     break;
