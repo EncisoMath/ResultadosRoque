@@ -63,7 +63,7 @@ body {
     text-align: center; /* Centrar el contenido dentro del cuadro */
 }
 
-input[type="text"], select, button {
+input[type="text"], input[type="tel"], select, button {
     font-size: 18px;
     padding: 10px;
     margin: 10px;
