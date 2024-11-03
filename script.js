@@ -269,6 +269,14 @@ const idAlumno = codigo; // El ID del alumno es el código ingresado
 const imgExtensions = ['jpg', 'png']; // Extensiones de imagen permitidas
 const imgExamens = []; // Arreglo para almacenar imágenes encontradas
 
+// Crear el contenedor para las imágenes
+const container = document.createElement('div');
+container.id = 'imagenes-container'; // Asigna un ID al contenedor
+container.style.display = 'flex';
+container.style.flexDirection = 'column';
+container.style.alignItems = 'center';
+container.style.gap = '10px';
+
 // Buscar imágenes del examen desde p1 hasta p4
 for (let i = 1; i <= 4; i++) {
     for (const ext of imgExtensions) {
@@ -287,21 +295,18 @@ for (let i = 1; i <= 4; i++) {
 
 // Luego puedes continuar con la lógica de mostrar las imágenes encontradas
 if (imgExamens.length > 0) {
-    const container = document.getElementById('imagenes-container'); // Asegúrate de tener un contenedor con este ID en tu HTML
+    imgExamens.forEach(imgSrc => {
+        const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
+        imgElement.src = imgSrc; // Asigna la fuente de la imagen
+        imgElement.alt = 'Imagen del examen'; // Texto alternativo
+        imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
+        imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
 
-    if (container) { // Verifica que el contenedor exista
-        imgExamens.forEach(imgSrc => {
-            const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
-            imgElement.src = imgSrc; // Asigna la fuente de la imagen
-            imgElement.alt = 'Imagen del examen'; // Texto alternativo
-            imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
-            imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
+        container.appendChild(imgElement); // Agrega la imagen al contenedor
+    });
 
-            container.appendChild(imgElement); // Agrega la imagen al contenedor
-        });
-    } else {
-        console.error('El contenedor para las imágenes no se encontró en el HTML.');
-    }
+    // Agregar el contenedor al body o a otro elemento deseado
+    document.body.appendChild(container); // Puedes cambiar 'document.body' por otro contenedor específico
 } else {
     console.log('No se encontraron imágenes.');
 }
