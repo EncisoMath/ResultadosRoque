@@ -298,75 +298,79 @@ for (let i = 1; i <= 4; i++) {
 resultado.innerHTML = `
     <h1>Resultados</h1>
 
-    <!-- Contenedor principal -->
-    <div class="resultados-container" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+ <!-- Contenedor principal -->
+<div class="resultados-container" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
 
-        <!-- Bloque superior (Información del alumno) -->
-        <div class="resultado-left" style="width: 100%; text-align: center; margin-bottom: 20px;">
-            <div class="resultado-item" style="margin-bottom: 10px;">
-                <span class="bold-font" style="color: orange; font-size: 22px;">Alumno: </span>
-                <span>${NOMBRE}</span>
-            </div>
-            <div class="resultado-item">
-                <span class="bold-font" style="color: orange; font-size: 22px;">Grado y Sede: </span>
-                <span>${GRADO} ${SEDE}</span>
-            </div>
+    <!-- Bloque superior (Información del alumno) -->
+    <div class="resultado-left" style="width: 100%; text-align: center; margin-bottom: 20px;">
+        <div class="resultado-item" style="margin-bottom: 10px;">
+            <span class="bold-font" style="color: orange; font-size: 22px;">Alumno: </span>
+            <span>${NOMBRE}</span>
         </div>
+        <div class="resultado-item">
+            <span class="bold-font" style="color: orange; font-size: 22px;">Grado y Sede: </span>
+            <span>${GRADO} ${SEDE}</span>
+        </div>
+    </div>
 
-        <!-- Bloque inferior (Ranking) -->
-        <div class="resultado-right" style="width: 100%; text-align: center;">
-            <!-- Título "Ranking" centrado -->
-            <div class="bold-font" style="color: orange; font-size: 35px; margin-top: 0;">Ranking</div>
+    <!-- Bloque inferior (Ranking) -->
+    <div class="resultado-right" style="width: 100%; text-align: center;">
+        <!-- Título "Ranking" centrado -->
+        <div class="bold-font" style="color: orange; font-size: 35px; margin-top: 0;">Ranking</div>
 
-            <!-- División de dos columnas para RANKING_C y RANKING_G -->
-            <div class="bold-font" style="font-size: 32px; display: flex; justify-content: space-around; margin-top: 20px;">
+        <!-- División de dos columnas para RANKING_C y RANKING_G -->
+        <div class="bold-font" style="font-size: 32px; display: flex; justify-content: space-around; margin-top: 20px;">
 
-                <!-- Columna izquierda con RANKING_C -->
-                <div style="text-align: center;">
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                        <img src="Iconos/${RANKING_C >= 1 && RANKING_C <= 3 ? `${RANKING_C}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
-                        <span>${RANKING_C}</span>
-                    </div>
-                    <div style="font-size: 18px; margin-top: 10px;">Nivel Curso</div>
+            <!-- Columna izquierda con RANKING_C -->
+            <div style="text-align: center;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="Iconos/${RANKING_C >= 1 && RANKING_C <= 3 ? `${RANKING_C}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
+                    <span>${RANKING_C}</span>
                 </div>
+                <div style="font-size: 18px; margin-top: 10px;">Nivel Curso</div>
+            </div>
 
-                <!-- Columna derecha con RANKING_G -->
-                <div style="text-align: center;">
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                        <img src="Iconos/${RANKING_G >= 1 && RANKING_G <= 3 ? `${RANKING_G}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
-                        <span>${RANKING_G}</span>
-                    </div>
-                    <div style="font-size: 18px; margin-top: 10px;">Nivel Grado</div>
+            <!-- Columna derecha con RANKING_G -->
+            <div style="text-align: center;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="Iconos/${RANKING_G >= 1 && RANKING_G <= 3 ? `${RANKING_G}` : 'RANKING'}.png" style="width: 35px; height: 35px;">
+                    <span>${RANKING_G}</span>
                 </div>
+                <div style="font-size: 18px; margin-top: 10px;">Nivel Grado</div>
             </div>
         </div>
     </div>
-    <hr>
-    ${tablaNotas}
-// Luego puedes continuar con la lógica de mostrar las imágenes encontradas
-if (imgExamens.length > 0) {
-    imgExamens.forEach(imgSrc => {
-        const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
-        imgElement.src = imgSrc; // Asigna la fuente de la imagen
-        imgElement.alt = 'Imagen del examen'; // Texto alternativo
-        imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
-        imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
 
-        container.appendChild(imgElement); // Agrega la imagen al contenedor
-    });
+</div>
 
-    // Agregar el contenedor al body o a otro elemento deseado
-    document.body.appendChild(container); // Puedes cambiar 'document.body' por otro contenedor específico
-} else {
-    console.log('No se encontraron imágenes.');
-}
-    <!-- Descripción de colores -->
-    <div style="text-align: center; width: 100%; max-width: 1000px;">
-        <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
+                        </div>
+                        <hr>
+                        ${tablaNotas}
+                        <h3>Aquí está tu examen:</h3>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <!-- Contenedor de las imágenes -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen1}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen2}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen3}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen4}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
     </div>
-`;
+                            
+                            <!-- Descripción de colores -->
+                            <div style="text-align: center; width: 100%; max-width: 1000px;">
+                                <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
+                            </div>
+                        </div>
 
-
+                    `;
 
                     encontrado = true;
                     break;
