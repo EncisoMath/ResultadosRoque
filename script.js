@@ -287,7 +287,19 @@ for (let i = 1; i <= 4; i++) {
 
 // Luego puedes continuar con la lógica de mostrar las imágenes encontradas
 if (imgExamens.length > 0) {
-    // Aquí puedes agregar el código para mostrar las imágenes
+    const container = document.getElementById('imagenes-container'); // Asegúrate de tener un contenedor con este ID en tu HTML
+
+    imgExamens.forEach(imgSrc => {
+        const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
+        imgElement.src = imgSrc; // Asigna la fuente de la imagen
+        imgElement.alt = 'Imagen del examen'; // Texto alternativo
+        imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
+        imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
+
+        container.appendChild(imgElement); // Agrega la imagen al contenedor
+    });
+} else {
+    console.log('No se encontraron imágenes.');
 }
 
 
