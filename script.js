@@ -265,36 +265,61 @@ const tablaNotas = `
 
 
                     // Aquí se agrega el mensaje y la imagen del examen después de la tabla de notas
-const idAlumno = codigo; // El ID del alumno es el código ingresado
-const imgExtensions = ['jpg', 'png']; // Extensiones de imagen permitidas
-const imgExamens = []; // Arreglo para almacenar imágenes encontradas
+                    const idAlumno = codigo; // El ID del alumno es el código ingresado
+                    const imgExtensions = ['jpg', 'png']; // Extensiones de imagen permitidas
+                    let imgExamen1 = '';
+                    let imgExamen2 = '';
+                    let imgExamen3 = '';
+                    let imgExamen4 = '';
 
-// Función para buscar imágenes
-async function buscarImagenes(prueba, idAlumno) {
-    for (let i = 1; i <= 4; i++) { // Busca imágenes desde p1 hasta p4
-        for (const ext of imgExtensions) {
-            const imgExamen = `Soportes/${prueba}/${idAlumno}_p${i}.${ext}`;
-            try {
-                const response = await fetch(imgExamen);
-                if (response.ok) {
-                    imgExamens.push(imgExamen); // Guarda la imagen si existe
-                    break; // Sale del bucle si encuentra la imagen
-                }
-            } catch (error) {
-                console.error(`Imagen no encontrada: ${imgExamen}`);
-            }
-        }
-    }
-}
+                    // Buscar la imagen del examen según el ID
+                    for (const ext of imgExtensions) {
+                        imgExamen1 = `Soportes/${prueba}/${idAlumno}_p1.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen1);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen1}`);
+                        }
+                    };
 
-// Llama a la función de búsqueda
-await buscarImagenes(prueba, idAlumno);
+                    for (const ext of imgExtensions) {
+                        imgExamen2 = `Soportes/${prueba}/${idAlumno}_p2.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen2);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen2}`);
+                        }
+                    }
 
+                    for (const ext of imgExtensions) {
+                        imgExamen3 = `Soportes/${prueba}/${idAlumno}_p3.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen3);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen3}`);
+                        }
+                    }
 
-
-
-
-                    
+                    for (const ext of imgExtensions) {
+                        imgExamen4 = `Soportes/${prueba}/${idAlumno}_p4.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen4);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen4}`);
+                        }
+                    }
 
                     // Añadir el mensaje y la imagen al HTML
                     resultado.innerHTML = `
@@ -349,23 +374,23 @@ await buscarImagenes(prueba, idAlumno);
                         </div>
                         <hr>
                         ${tablaNotas}
-if (imgExamens.length > 0) { // Solo muestra si hay imágenes encontradas
-    document.write('<h3>Aquí está tu examen:</h3>');
-    document.write('<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">');
-    document.write('<div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">');
-
-    imgExamens.forEach((imgSrc) => {
-        document.write(`
-            <div style="width: 100%; max-width: 500px; overflow: hidden;">
-                <img src="${imgSrc}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
-            </div>
-        `);
-    });
-
-    document.write('</div></div>');
-} else {
-    document.write('<h3>No hay exámenes disponibles.</h3>'); // Mensaje opcional si no hay imágenes
-}
+                        <h3>Aquí está tu examen:</h3>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+    <!-- Contenedor de las imágenes -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen1}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen2}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen3}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
+        <div style="width: 100%; max-width: 500px; overflow: hidden;">
+            <img src="${imgExamen4}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
+        </div>
+    </div>
                             
                             <!-- Descripción de colores -->
                             <div style="text-align: center; width: 100%; max-width: 1000px;">
