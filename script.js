@@ -344,33 +344,6 @@ if (imgExamens.length > 0) {
                         </div>
                         <hr>
                         ${tablaNotas}
-
-
-// Verificar si hay al menos una imagen
-if (imgExamens.length > 0) {
-    // Mensaje que se mostrará si hay imágenes
-    const mensajeExamen = "<h3>Aquí está tu examen:</h3>";
-    document.getElementById('resultado').innerHTML += mensajeExamen; // Agrega el mensaje al contenedor 'resultado'
-
-    // Crear el contenedor de las imágenes
-    let imagenesHTML = '<div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">';
-    
-    // Iterar sobre imgExamens y agregar cada imagen
-    imgExamens.forEach(src => {
-        imagenesHTML += `
-            <div style="width: 100%; max-width: 500px; overflow: hidden;">
-                <img src="${src}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" 
-                     onerror="this.onerror=null; this.src='Iconos/NA.png';">
-            </div>
-        `;
-    });
-
-    imagenesHTML += '</div>'; // Cierra el contenedor de las imágenes
-
-    // Agregar las imágenes al contenedor 'resultado'
-    document.getElementById('resultado').innerHTML += imagenesHTML;
-}
-                            
                             <!-- Descripción de colores -->
                             <div style="text-align: center; width: 100%; max-width: 1000px;">
                                 <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
