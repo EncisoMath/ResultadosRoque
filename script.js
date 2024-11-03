@@ -77,14 +77,12 @@ async function cargarPruebas() {
 // Función para mostrar el campo de código cuando se selecciona una prueba
 function mostrarCampoCodigo() {
     const prueba = document.getElementById('prueba').value;
-    const soloNumerosCuatroDigitos = /^\d{4}$/; // Expresión regular para solo cuatro dígitos numéricos
-
-    if (soloNumerosCuatroDigitos.test(prueba)) {
+    if (prueba) {
         document.getElementById('busqueda').style.display = 'block'; // Mostrar el campo de código
-    } else {
-        document.getElementById('busqueda').style.display = 'none'; // Ocultar si no cumple
     }
 }
+
+
 
 
 let kakashi = ''; // Constante para almacenar el resultado
