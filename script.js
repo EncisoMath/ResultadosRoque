@@ -263,27 +263,63 @@ const tablaNotas = `
     </table>
 `;
 
-                    
-const idAlumno = codigo; // El ID del alumno es el código ingresado
-const imgExtensions = ['jpg']; // Extensiones de imagen permitidas
-const imgExamenes = [];
 
-for (let i = 1; i <= 4; i++) {
-    for (const ext of imgExtensions) {
-        const imgExamen = `Soportes/${prueba}/${idAlumno}_p${i}.${ext}`;
-        try {
-            const response = await fetch(imgExamen);
-            if (response.ok) {
-                imgExamenes[i - 1] = imgExamen; // Guardar la imagen encontrada
-                break; // Si encuentra la imagen, se sale del bucle
-            }
-        } catch (error) {
-            console.error(`Imagen no encontrada: ${imgExamen}`);
-        }
-    }
-}
+                    // Aquí se agrega el mensaje y la imagen del examen después de la tabla de notas
+                    const idAlumno = codigo; // El ID del alumno es el código ingresado
+                    const imgExtensions = ['jpg']; // Extensiones de imagen permitidas
+                    let imgExamen1 = '';
+                    let imgExamen2 = '';
+                    let imgExamen3 = '';
+                    let imgExamen4 = '';
 
-                    
+                    // Buscar la imagen del examen según el ID
+                    for (const ext of imgExtensions) {
+                        imgExamen1 = `Soportes/${prueba}/${idAlumno}_p1.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen1);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen1}`);
+                        }
+                    };
+
+                    for (const ext of imgExtensions) {
+                        imgExamen2 = `Soportes/${prueba}/${idAlumno}_p2.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen2);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen2}`);
+                        }
+                    }
+
+                    for (const ext of imgExtensions) {
+                        imgExamen3 = `Soportes/${prueba}/${idAlumno}_p3.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen3);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen3}`);
+                        }
+                    }
+
+                    for (const ext of imgExtensions) {
+                        imgExamen4 = `Soportes/${prueba}/${idAlumno}_p4.${ext}`;
+                        try {
+                            const response = await fetch(imgExamen4);
+                            if (response.ok) {
+                                break; // Si encuentra la imagen, se sale del bucle
+                            }
+                        } catch (error) {
+                            console.error(`Imagen no encontrada: ${imgExamen4}`);
+                        }
+                    }
 
 // Función para comprobar si la imagen existe
 function checkImageExists(url) {
