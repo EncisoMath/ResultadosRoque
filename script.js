@@ -374,23 +374,6 @@ const tablaNotas = `
                         </div>
                         <hr>
                         ${tablaNotas}
-                        <h3>Aquí está tu examen:</h3>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-    <!-- Contenedor de las imágenes -->
-    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
-        <div style="width: 100%; max-width: 500px; overflow: hidden;">
-            <img src="${imgExamen1}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
-        </div>
-        <div style="width: 100%; max-width: 500px; overflow: hidden;">
-            <img src="${imgExamen2}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
-        </div>
-        <div style="width: 100%; max-width: 500px; overflow: hidden;">
-            <img src="${imgExamen3}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
-        </div>
-        <div style="width: 100%; max-width: 500px; overflow: hidden;">
-            <img src="${imgExamen4}" style="width: 100%; height: auto; object-fit: cover; object-position: center;" onerror="this.onerror=null; this.src='Iconos/NA.png';">
-        </div>
-    </div>
                             
                             <!-- Descripción de colores -->
                             <div style="text-align: center; width: 100%; max-width: 1000px;">
