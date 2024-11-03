@@ -293,24 +293,6 @@ for (let i = 1; i <= 4; i++) {
     }
 }
 
-// Luego puedes continuar con la lógica de mostrar las imágenes encontradas
-if (imgExamens.length > 0) {
-    imgExamens.forEach(imgSrc => {
-        const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
-        imgElement.src = imgSrc; // Asigna la fuente de la imagen
-        imgElement.alt = 'Imagen del examen'; // Texto alternativo
-        imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
-        imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
-
-        container.appendChild(imgElement); // Agrega la imagen al contenedor
-    });
-
-    // Agregar el contenedor al body o a otro elemento deseado
-    document.body.appendChild(container); // Puedes cambiar 'document.body' por otro contenedor específico
-} else {
-    console.log('No se encontraron imágenes.');
-}
-
 
 // Añadir el mensaje y la imagen al HTML
 resultado.innerHTML = `
@@ -361,7 +343,23 @@ resultado.innerHTML = `
     </div>
     <hr>
     ${tablaNotas}
+// Luego puedes continuar con la lógica de mostrar las imágenes encontradas
+if (imgExamens.length > 0) {
+    imgExamens.forEach(imgSrc => {
+        const imgElement = document.createElement('img'); // Crea un nuevo elemento de imagen
+        imgElement.src = imgSrc; // Asigna la fuente de la imagen
+        imgElement.alt = 'Imagen del examen'; // Texto alternativo
+        imgElement.style.maxWidth = '200px'; // Ajusta el tamaño según sea necesario
+        imgElement.style.margin = '10px'; // Añade un margen para separar las imágenes
 
+        container.appendChild(imgElement); // Agrega la imagen al contenedor
+    });
+
+    // Agregar el contenedor al body o a otro elemento deseado
+    document.body.appendChild(container); // Puedes cambiar 'document.body' por otro contenedor específico
+} else {
+    console.log('No se encontraron imágenes.');
+}
     <!-- Descripción de colores -->
     <div style="text-align: center; width: 100%; max-width: 1000px;">
         <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
