@@ -90,7 +90,7 @@ let naruto = []; // Constante para almacenar el resultado
 let asignaturas = []; // Lista para almacenar los datos separados
 
 async function cargarCSV() {
-    let holi = ''; // Constante para almacenar el resultado
+    let sasuke = ''; // Constante para almacenar el resultado
     let sakura = ''; // Constante para almacenar el resultado
     const pruebaBuscada = document.getElementById('prueba').value;
     try {
@@ -112,18 +112,18 @@ async function cargarCSV() {
         for (let i = 1; i < filas.length; i++) {
             const fila = filas[i].split(',').map(field => field.trim());
             if (fila[indiceNombrePrueba] === pruebaBuscada) {
-                holi = fila[indiceAsignaturas]; // Actualiza la variable global 'holi'
-                sakura = fila[indicePreguntas]; // Actualiza la variable global 'holi'
-                asignaturas = holi.split(';').map(item => item.trim()); // Divide el valor de 'holi' en una lista usando el separador ';'
-                naruto = sakura.split(';').map(item => item.trim()); // Divide el valor de 'holi' en una lista usando el separador ';'
+                sasuke = fila[indiceAsignaturas]; // Actualiza la variable global 'sasuke'
+                sakura = fila[indicePreguntas]; // Actualiza la variable global 'sasuke'
+                asignaturas = sasuke.split(';').map(item => item.trim()); // Divide el valor de 'sasuke' en una lista usando el separador ';'
+                naruto = sakura.split(';').map(item => item.trim()); // Divide el valor de 'sasuke' en una lista usando el separador ';'
                 
                 kakashi = fila[indiceArchivo]; // Actualiza la variable global 'kakashi'
                 break; // Termina el bucle cuando se encuentra el resultado
             }
         }
 
-        // Verifica el contenido de 'holi', 'asignaturas' y 'kakashi' en la consola
-        console.log('holi:', holi);
+        // Verifica el contenido de 'sasuke', 'asignaturas' y 'kakashi' en la consola
+        console.log('sasuke:', sasuke);
         console.log('asignaturas:', asignaturas);
         console.log('kakashi:', kakashi);
         console.log('naruto:', naruto);
