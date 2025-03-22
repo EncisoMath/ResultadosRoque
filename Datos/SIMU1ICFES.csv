@@ -33,42 +33,42 @@ ID,SEDE,GRADO,NOMBRE,PUNTAJE,RANKING_G,RANKING_C,ARITMETICA,R_ARITMETICA,ESTADIS
 7663,MUNICIPAL,11,Beltran Zarco Yefri Rafael,310,8,8,3,30,2,20,4,40,2,20,0,0,0,0,0,0,4,40,6,60,3,30,4,40,3,30
 7926,MUNICIPAL,11,Manga Valdeblanco Sheila Michel,100,10,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,30,3,30,0,0,0,0,4,40
 7670,MUNICIPAL,11,Cueto Viloria Adrian Alfredo,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
-7943,MUNICIPAL,11,Herrera Angulo Sharon Yulieth,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7797,MUNICIPAL,11,García Campos Sebastián Andrés,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7799,MUNICIPAL,11,De La Cruz Blanco Daini David,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7796,MUNICIPAL,11,Caballero Pérez Natalia Marcela,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7660,MUNICIPAL,11,Diaz Morales Elvira Milagro,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7793,MUNICIPAL,11,Pérez Barceló Eimy Sofia,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7795,MUNICIPAL,11,Fontalvo Aragón Keiner Enrique,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7672,MUNICIPAL,11,Martinez Rodriguez Taliana Andrea,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7932,MUNICIPAL,11,Rodriguez Esquivel Angie Paola,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7927,MUNICIPAL,11,Mercado Caicedo Milagro Salemn,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7934,MUNICIPAL,11,Teran Lobato Sheryl Adriana,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7800,MUNICIPAL,11,Fernandez Bolaño Carolina Sandrid,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7931,MUNICIPAL,11,Posso De La Hoz Samuel Guillermo,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7757,MUNICIPAL,11,Hernandez Garcia Jeilis Johana,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7808,MUNICIPAL,11,Rodriguez Palacio Esther,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7938,MUNICIPAL,11,Vizcaino Pacheco Cindy Carolina,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7661,MUNICIPAL,11,Flores De Horta Efraín Josúe,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7928,MUNICIPAL,11,Pertuz Bolaño Carmen Rosa,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7942,MUNICIPAL,11,Ferrer Molina Nauliana Andrea,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7658,MUNICIPAL,11,Cantillo Cabarcas Cristian Camilo,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7973,MUNICIPAL,11,Altahona Villalobos Luis José,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7794,MUNICIPAL,11,Salas Torrecillas Juan Esteban,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7665,MUNICIPAL,11,Perez Rosado Diumar Yamith,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7792,MUNICIPAL,11,Bolaño Aragón Deiner Rafael,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7666,MUNICIPAL,11,Pertuz Bolaño Victor,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7971,MUNICIPAL,11,Hernandez Martinez Shildris,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7789,MUNICIPAL,11,Cabarca Rodriguez Cristian Camilo,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7664,MUNICIPAL,11,Gonzalez Hurtado Mariana,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7946,MUNICIPAL,11,Vizcaino Torrez Johana Patricia,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7929,MUNICIPAL,11,Polo Perez Lia Carolina,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7937,MUNICIPAL,11,Vivic Mejia Linda Janery,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7924,MUNICIPAL,11,De Orta Rodriguez Pedro Luis,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7807,MUNICIPAL,11,Lobato Gutierrez Jose Alejandro,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7673,MUNICIPAL,11,Vasquez Pertuz Nicoll Sofia,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7933,MUNICIPAL,11,Segura Caballero Yenifer Smith,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7936,MUNICIPAL,11,Valle Lopez Decsandra,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7668,MUNICIPAL,11,Ternera Berrio Zharit,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7659,MUNICIPAL,11,Chacón Mejía Fran Javier,,,,,,,,,,,,,,,,,,,,,,,,,,,
-7675,MUNICIPAL,11,Castillo Florez Nathaly Milena,,,,,,,,,,,,,,,,,,,,,,,,,,,
+7943,MUNICIPAL,11,Herrera Angulo Sharon Yulieth,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7797,MUNICIPAL,11,García Campos Sebastián Andrés,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7799,MUNICIPAL,11,De La Cruz Blanco Daini David,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7796,MUNICIPAL,11,Caballero Pérez Natalia Marcela,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7660,MUNICIPAL,11,Diaz Morales Elvira Milagro,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7793,MUNICIPAL,11,Pérez Barceló Eimy Sofia,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7795,MUNICIPAL,11,Fontalvo Aragón Keiner Enrique,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7672,MUNICIPAL,11,Martinez Rodriguez Taliana Andrea,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7932,MUNICIPAL,11,Rodriguez Esquivel Angie Paola,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7927,MUNICIPAL,11,Mercado Caicedo Milagro Salemn,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7934,MUNICIPAL,11,Teran Lobato Sheryl Adriana,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7800,MUNICIPAL,11,Fernandez Bolaño Carolina Sandrid,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7931,MUNICIPAL,11,Posso De La Hoz Samuel Guillermo,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7757,MUNICIPAL,11,Hernandez Garcia Jeilis Johana,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7808,MUNICIPAL,11,Rodriguez Palacio Esther,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7938,MUNICIPAL,11,Vizcaino Pacheco Cindy Carolina,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7661,MUNICIPAL,11,Flores De Horta Efraín Josúe,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7928,MUNICIPAL,11,Pertuz Bolaño Carmen Rosa,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7942,MUNICIPAL,11,Ferrer Molina Nauliana Andrea,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7658,MUNICIPAL,11,Cantillo Cabarcas Cristian Camilo,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7973,MUNICIPAL,11,Altahona Villalobos Luis José,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7794,MUNICIPAL,11,Salas Torrecillas Juan Esteban,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7665,MUNICIPAL,11,Perez Rosado Diumar Yamith,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7792,MUNICIPAL,11,Bolaño Aragón Deiner Rafael,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7666,MUNICIPAL,11,Pertuz Bolaño Victor,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7971,MUNICIPAL,11,Hernandez Martinez Shildris,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7789,MUNICIPAL,11,Cabarca Rodriguez Cristian Camilo,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7664,MUNICIPAL,11,Gonzalez Hurtado Mariana,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7946,MUNICIPAL,11,Vizcaino Torrez Johana Patricia,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7929,MUNICIPAL,11,Polo Perez Lia Carolina,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7937,MUNICIPAL,11,Vivic Mejia Linda Janery,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7924,MUNICIPAL,11,De Orta Rodriguez Pedro Luis,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7807,MUNICIPAL,11,Lobato Gutierrez Jose Alejandro,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7673,MUNICIPAL,11,Vasquez Pertuz Nicoll Sofia,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7933,MUNICIPAL,11,Segura Caballero Yenifer Smith,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7936,MUNICIPAL,11,Valle Lopez Decsandra,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7668,MUNICIPAL,11,Ternera Berrio Zharit,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7659,MUNICIPAL,11,Chacón Mejía Fran Javier,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
+7675,MUNICIPAL,11,Castillo Florez Nathaly Milena,710,1,1,5,50,8,80,5,50,9,90,3,30,4,40,3,30,6,60,9,90,8,80,4,40,7,70
