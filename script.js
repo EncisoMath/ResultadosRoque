@@ -319,14 +319,7 @@ async function renderResultados() {
 
 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
     <!-- Contenedor de los botones de descarga -->
-    <div style="display: flex; flex-direction: column; gap: 10px;">
-        ${validImages.length > 0 ? validImages.map((file, index) => 
-            <button onclick="window.location.href='${img}'" 
-                    style="padding: 10px; font-size: 18px;">
-                Descarga tu prueba P${index + 1}
-            </button>
-        ).join('') : '<p>No hay imágenes disponibles.</p>'}
-    </div>
+
 
 
 
