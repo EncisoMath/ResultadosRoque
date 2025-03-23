@@ -265,7 +265,7 @@ const tablaNotas = `
 
 
 const idAlumno = codigo; // El ID del alumno es el código ingresado
-const fileExtensions = ['jpg', 'png', 'pdf', 'docx', 'xlsx', 'txt', 'zip']; // Extensiones permitidas
+const fileExtensions = ['jpg', 'png', 'pdf']; // Extensiones permitidas
 let validFiles = [];
 
 async function checkFileExists(url) {
@@ -281,15 +281,14 @@ async function checkFileExists(url) {
 async function buscarArchivos() {
     let archivos = [];
 
-    for (let i = 1; i <= 4; i++) {
         for (const ext of fileExtensions) {
-            const file = `Soportes/${prueba}/${idAlumno}_p${i}.${ext}`;
+            const file = `Soportes/${prueba}/${idAlumno}.${ext}`;
             if (await checkFileExists(file)) {
                 archivos.push(file);
                 break; // Si se encuentra, no se buscan más extensiones para ese archivo
             }
         }
-    }
+    
 
     return archivos;
 }
@@ -304,7 +303,7 @@ async function renderResultados() {
                 ${validFiles.length > 0 ? validFiles.map((file, index) => `
                     <button onclick="window.open('${file}', '_blank')" 
                             style="padding: 10px; font-size: 18px;">
-                        Descarga tu archivo P${index + 1}
+                        Descarga tu informe de resultados
                     </button>
                 `).join('') : '<p>No hay archivos disponibles.</p>'}
             </div>
