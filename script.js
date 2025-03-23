@@ -320,8 +320,8 @@ async function renderResultados() {
 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
     <!-- Contenedor de los botones de descarga -->
 <div style="display: flex; flex-direction: column; gap: 10px;">
-    ${validFiles.length > 0 ? validFiles.map((img, index) => `
-        <button onclick="window.location.href='${img}'" 
+    ${validFiles.length > 0 ? validFiles.map((file, index) => `
+        <button onclick="window.location.href='${file}'" 
                 style="padding: 10px; font-size: 18px;">
             Descarga tu archivo ${index + 1}
         </button>
