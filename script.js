@@ -266,7 +266,7 @@ const tablaNotas = `
 
 
 const idAlumno = codigo; // El ID del alumno es el código ingresado
-const imgExtensions = ['jpg','pdf']; // Extensiones de imagen permitidas
+const fileExtensions = ['jpg','pdf']; // Extensiones de imagen permitidas
 let validFiles = [];
 
 async function checkFileExists(url) {
