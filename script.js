@@ -267,68 +267,49 @@ const tablaNotas = `
 
 const idAlumno = codigo; // El ID del alumno es el código ingresado
 const imgExtensions = ['jpg','pdf']; // Extensiones de imagen permitidas
-let imgExamen1 = '';
-let imgExamen2 = '';
-let imgExamen3 = '';
-let imgExamen4 = '';
+let validFiles = [];
 
-for (let i = 1; i <= 4; i++) {
-    for (const ext of imgExtensions) {
-        const imgExamen = `Soportes/${prueba}/${idAlumno}_p${i}.${ext}`;
-        try {
-            const response = await fetch(imgExamen);
-            if (response.ok) {
-                eval(`imgExamen${i} = imgExamen`); // Asignar la imagen encontrada a la variable correspondiente
-                break; // Si encuentra la imagen, se sale del bucle
-            }
-        } catch (error) {
-            console.error(`Imagen no encontrada: ${imgExamen}`);
-        }
+async function checkFileExists(url) {
+    try {
+        const response = await fetch(url, { method: 'HEAD' }); // Verificar sin descargar
+        return response.ok;
+    } catch (error) {
+        console.error(`Archivo no encontrado: ${url}`);
+        return false;
     }
 }
 
+async function buscarArchivos() {
+    let archivos = [];
 
+    for (let i = 1; i <= 4; i++) {
+        for (const ext of fileExtensions) {
+            const file = `Soportes/${prueba}/${idAlumno}_p${i}.${ext}`;
+            if (await checkFileExists(file)) {
+                archivos.push(file);
+                break; // Si se encuentra, no se buscan más extensiones para ese archivo
+            }
+        }
+    }
 
-
-
-                    
-// Función para comprobar si la imagen existe
-function checkImageExists(url) {
-    return new Promise((resolve) => {
-        const img = new Image();
-        img.src = url;
-        img.onload = () => resolve(true);
-        img.onerror = () => resolve(false);
-    });
+    return archivos;
 }
 
 async function renderResultados() {
-    const images = [imgExamen1, imgExamen2, imgExamen3, imgExamen4];
-    const validImages = [];
+    validFiles = await buscarArchivos();
 
-    // Comprobar cada imagen y agregar las válidas al array
-    for (const img of images) {
-        if (await checkImageExists(img)) {
-            validImages.push(img);
-        }
-    }
-
-    resultado.innerHTML = `
-
-<h3>Aquí está tu examen:</h3>
-
-<div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-    <!-- Contenedor de los botones de descarga -->
-
-
-
-
-    <!-- Descripción de colores -->
-    <div style="text-align: center; width: 100%; max-width: 1000px;">
-        <p>🟢 Correcta | 🟡 Respuesta Correcta | 🔴 Incorrecta</p>
-    </div>
-</div>
-
+    document.getElementById("resultado").innerHTML = `
+        <h3>Aquí está tu examen:</h3>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                ${validFiles.length > 0 ? validFiles.map((file, index) => `
+                    <button onclick="window.open('${file}', '_blank')" 
+                            style="padding: 10px; font-size: 18px;">
+                        Descarga tu prueba P${index + 1}
+                    </button>
+                `).join('') : '<p>No hay archivos disponibles.</p>'}
+            </div>
+        </div>
     `;
 }
 
