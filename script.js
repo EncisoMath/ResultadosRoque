@@ -264,9 +264,8 @@ const tablaNotas = `
 `;
 
 
-
 const idAlumno = codigo; // El ID del alumno es el código ingresado
-const fileExtensions = ['jpg','pdf']; // Extensiones de imagen permitidas
+const fileExtensions = ['jpg', 'png', 'pdf', 'docx', 'xlsx', 'txt', 'zip']; // Extensiones permitidas
 let validFiles = [];
 
 async function checkFileExists(url) {
@@ -305,7 +304,7 @@ async function renderResultados() {
                 ${validFiles.length > 0 ? validFiles.map((file, index) => `
                     <button onclick="window.open('${file}', '_blank')" 
                             style="padding: 10px; font-size: 18px;">
-                        Descarga tu prueba P${index + 1}
+                        Descarga tu archivo P${index + 1}
                     </button>
                 `).join('') : '<p>No hay archivos disponibles.</p>'}
             </div>
@@ -313,8 +312,13 @@ async function renderResultados() {
     `;
 }
 
+// Llamar a la función cuando sea necesario
+
 // Llama a la función para renderizar los resultados
 renderResultados();
+
+
+                    
                     encontrado = true;
                     break;
                 }
