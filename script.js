@@ -314,12 +314,9 @@ async function renderResultados() {
     }
 
     resultado.innerHTML = `
-        <h1>Resultados</h1>
 
-
-        <hr>
-        ${tablaNotas}
 <h3>Aquí está tu examen:</h3>
+
 <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
     <!-- Contenedor de los botones de descarga -->
     <div style="display: flex; flex-direction: column; gap: 10px;">
@@ -330,6 +327,7 @@ async function renderResultados() {
             </button>
         `).join('') : '<p>No hay imágenes disponibles.</p>'}
     </div>
+
 
     <!-- Descripción de colores -->
     <div style="text-align: center; width: 100%; max-width: 1000px;">
@@ -342,9 +340,6 @@ async function renderResultados() {
 
 // Llama a la función para renderizar los resultados
 renderResultados();
-
-
-
                     encontrado = true;
                     break;
                 }
