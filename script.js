@@ -266,7 +266,7 @@ const tablaNotas = `
 
 
 const idAlumno = codigo; // El ID del alumno es el código ingresado
-const imgExtensions = ['jpg']; // Extensiones de imagen permitidas
+const imgExtensions = ['jpg','pdf']; // Extensiones de imagen permitidas
 let imgExamen1 = '';
 let imgExamen2 = '';
 let imgExamen3 = '';
