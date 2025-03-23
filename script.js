@@ -263,7 +263,6 @@ const tablaNotas = `
     </table>
 `;
 
-
 const idAlumno = codigo; // El ID del alumno es el código ingresado
 const fileExtensions = ['jpg', 'png', 'pdf']; // Extensiones permitidas
 let validFiles = [];
@@ -273,7 +272,7 @@ async function checkFileExists(url) {
         const response = await fetch(url, { method: 'HEAD' }); // Verificar sin descargar
         return response.ok;
     } catch (error) {
-        console.error(Archivo no encontrado: ${url});
+        console.error(`Archivo no encontrado: ${url}`);
         return false;
     }
 }
@@ -281,14 +280,13 @@ async function checkFileExists(url) {
 async function buscarArchivos() {
     let archivos = [];
 
-        for (const ext of fileExtensions) {
-            const file = Soportes/${prueba}/${idAlumno}.${ext};
-            if (await checkFileExists(file)) {
-                archivos.push(file);
-                break; // Si se encuentra, no se buscan más extensiones para ese archivo
-            }
+    for (const ext of fileExtensions) {
+        const file = `Soportes/${prueba}/${idAlumno}.${ext}`;
+        if (await checkFileExists(file)) {
+            archivos.push(file);
+            break; // Si se encuentra, no se buscan más extensiones para ese archivo
         }
-    
+    }
 
     return archivos;
 }
@@ -296,27 +294,23 @@ async function buscarArchivos() {
 async function renderResultados() {
     validFiles = await buscarArchivos();
 
-    document.getElementById("resultado").innerHTML = 
+    document.getElementById("resultado").innerHTML = `
         <h3>Aquí está tu examen:</h3>
         <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
             <div style="display: flex; flex-direction: column; gap: 10px;">
-                ${validFiles.length > 0 ? validFiles.map((file, index) => 
+                ${validFiles.length > 0 ? validFiles.map((file, index) => `
                     <button onclick="window.open('${file}', '_blank')" 
                             style="padding: 10px; font-size: 18px;">
                         Descarga tu informe de resultados
                     </button>
-                ).join('') : '<p>No hay archivos disponibles.</p>'}
+                `).join('') : '<p>No hay archivos disponibles.</p>'}
             </div>
         </div>
-    ;
+    `;
 }
 
-// Llamar a la función cuando sea necesario
-
-// Llama a la función para renderizar los resultados
+// Llamar a la función para renderizar los resultados
 renderResultados();
-
-
 
                     
                     encontrado = true;
