@@ -170,11 +170,6 @@ async function buscar() {
     const anio = document.getElementById('ano').value;
     const prueba = document.getElementById('prueba').value;
 
-    if (codigo.length !== 4) {
-        resultado.innerHTML = 'Por favor, ingresa un código de 4 dígitos.';
-        return;
-    }
-
     try {
         const nombreAsignaturaMap = await cargarNombresAsignaturas();
         const response = await fetch(`Datos/${kakashi}.csv`);
